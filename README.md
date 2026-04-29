@@ -144,3 +144,50 @@ Most consistent batter
 Best death-over team
 High-scoring venues
 Provide short observations (text-based)
+
+
+Stage 6: Reporting
+Objective
+Structure outputs for readability.
+
+Tasks
+Create clean DataFrames:
+sorted results
+renamed columns
+Format:
+column names (snake_case or readable format)
+
+
+
+
+Stage 7: Data Export
+Objective
+Save outputs as deliverables.
+
+Requirements
+Save results into structured files:
+
+output/
+
+├── runs_per_match.csv
+
+├── top_batters.csv
+
+├── strike_rate.csv
+
+├── economy.csv
+
+├── team_scores.csv
+
+├── death_overs.csv
+
+Additionally
+Export everything into a single Excel file:
+
+Sample:
+
+with pd.ExcelWriter("ipl_analysis.xlsx") as writer:
+
+   runs_per_match.to_excel(writer, sheet_name="Runs per Match", index=False)
+
+   top_batters.to_excel(writer, sheet_name="Top Batters", index=False)
